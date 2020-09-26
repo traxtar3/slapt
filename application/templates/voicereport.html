@@ -1,0 +1,25 @@
+
+    {% extends "layout.html" %}
+
+    {% block content %}
+    <h1 style="color:red">#####UNDER DEVELOPMENT#####</h1>
+    <h2 style="color:red">Concept Only</h2>
+    <h2>Create Voice Report</h2>
+
+    <div class="container">
+        <form name="voicereport" action="voicereport.php" method="get">
+            <!-- <label for="site"><b></b></label> -->
+            <input type="text" placeholder="Enter Site Name" name="site" required>
+            <!-- <br> -->
+            <!-- <label for="satid"><b></b></label> -->
+            <input type="text" placeholder="Enter Satellite ID" name="satid" required>
+            <!-- <br> -->
+            <!-- <label for="voicereport"><b></b></label> -->
+            <input type="text" placeholder="Enter Voice Report" name="voicereport" required>
+            <!-- <br> -->
+
+            <br class="clear">
+            <input class="btn-submit" type="submit" name="submit">
+        </form>
+    </div>
+    {% endblock %}

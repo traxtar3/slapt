@@ -1,0 +1,24 @@
+    {% extends "layout.html" %}
+
+
+    {% block content %}
+    {% include "includes/sitetaskings.html" %}
+    <h2>Current Site Taskings</h2>
+    <div><div class="mystyle">
+        {% autoescape off %}
+        {{ data.table1 }}
+        {% endautoescape %}
+        </table>
+            <form>
+            <input class="btn-submit" type="submit" name="editTasking" value="Edit Taskings">
+
+            </form>
+            <form>
+            <input class="btn-submit" type="submit" name="mkPosNeg" value="Create PosNeg">
+            </a>
+            </form>
+    </div>
+
+{% endblock %}
+
+

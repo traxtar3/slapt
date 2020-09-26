@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mystyle">
+            <!-- <link rel="stylesheet" type="text/css" href="/static/css/df_style.css"/> -->
+            <h2>Point of Closest Approach</h2>
+            <!-- {% autoescape off %} -->
+            {{ data.table1 }}
+            <!-- {% endautoescape %} -->
+            {% autoescape off %}
+            <br>{{ data.pocascc1 }} TLE age: {{ data.age1}}
+            <br>{{ data.pocascc2 }} TLE age: {{ data.age2}}
+            {% endautoescape %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+    {% extends "layout.html" %}
+
+
+    {% block content %}
+    {% include "includes/sitetaskings.html" %}
+    <h2>Current CAV Taskings</h2>
+    <div><div class="mystyle">
+        {% autoescape off %}
+        {{ data.table1 }}
+        {% endautoescape %}
+        </table>
+            <input class="btn-submit" type="submit" name="editTasking" value="Edit Taskings">
+            <input class="btn-submit" type="submit" name="mkPosNeg" value="Create PosNeg">
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <!-- <div class="col-md-12 text-center"> -->
+      <div class="container">
+            <header class="masthead">
+                    <h1>Satellite Look Angle Prediction Tool</h1>
+                </header>
+                <form method="post" action="." enctype="multipart/form-data">
+                    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+                    <!--<p><input type="file" id="myfile" name="myfile"></p>-->
+                    <label for="hrs"><b>Number of hours to forecast from now:</b></label>
+                    <input type="text" placeholder="Enter Number of Hours" name="hrs" maxlength="2" required>
+
+                    <label for="scc"><b>Satellite(s):</b></label>
+                    <input type="text" placeholder="Enter SCCs as comma seperated values (25544, 45589, etc.)" name="scc" required>
+
+
+                    <label for="place"><b>Site(s):</b></label>
+                    <br>
+<!--                     <select name="place" multiple size="7" style="width: 100px">
+                    <option value ="BLE" selected>BLE</option>
+                    <option value ="CAV">CAV</option>
+                    <option value ="CLR">CLR</option>
+                    <option value ="COD">COD</option>
+                    <option value ="EGL">EGL</option>
+                    <option value ="FYL">FYL</option>
+                    <option value ="THL">THL</option>
+                    </select> -->
+
+                    <input type="checkbox" id="BLE" name="place" value="BLE">
+                    <label for="place"> BLE </label>
+                    <br>
+                    <input type="checkbox" id="CAV" name="place" value="CAV">
+                    <label for="place"> CAV </label>
+                    <br>
+                    <input type="checkbox" id="CLR" name="place" value="CLR">
+                    <label for="place"> CLR </label>
+                    <br>
+                    <input type="checkbox" id="COD" name="place" value="COD">
+                    <label for="place"> COD </label>
+                    <br>
+                    <input type="checkbox" id="EGL" name="place" value="EGL">
+                    <label for="place"> EGL </label>
+                    <br>
+                    <input type="checkbox" id="FYL" name="place" value="FYL">
+                    <label for="place"> FYL </label>
+                    <br>
+                    <input type="checkbox" id="THL" name="place" value="THL">
+                    <label for="place"> THL </label>
+
+
+
+
+                    </p>
+                    <input class="btn-submit" type="submit" name="Do calculation" value="Do calculation">
+                    <!-- <p><input type="submit" value="Do calculation" /></p> -->
+                </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+

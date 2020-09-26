@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mystyle">
+            <!-- <link rel="stylesheet" type="text/css" href="/static/css/df_style.css"/> -->
+            <h2>Orbit Data</h2>
+            <!-- {% autoescape off %} -->
+            {{ data.table2 }}
+            <!-- {% endautoescape %} -->
+            <h2>Pass Times</h2>
+            <!-- {% autoescape off %} -->
+            {{ data.table1 }}
+            <!-- {% endautoescape %} -->
+            <h4>SATNOs Processed: {{ data.sccP }}
+            <br>SATNOs Not Processed: {{ data.diffx }}</h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}

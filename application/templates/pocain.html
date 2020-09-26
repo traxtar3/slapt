@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <!-- <div class="col-md-12 text-center"> -->
+      <div class="container">
+            <header class="masthead">
+                    <h1>Point of Closest Approach Tool</h1>
+                </header>
+                <form method="post" enctype="multipart/form-data">
+                    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+                    <!--<p><input type="file" id="myfile" name="myfile"></p>-->
+                    <!-- <label for="pocahrs"><b>Number of hours to forecast from now:</b></label> -->
+                    <input type="text" placeholder="Enter Number of Hours to forcast (<72)" name="pocahrs" maxlength="2" required>
+
+                    <!-- <label for="pocascc1"><b>Satellite 1:</b></label> -->
+                    <input type="text" placeholder="Enter First SCC Number (25544, 45589, etc.)" name="pocascc1" required>
+                    <!-- <label for="pocascc2"><b>Satellite 1:</b></label> -->
+                    <input type="text" placeholder="Enter Second SCC Number (25544, 45589, etc.)" name="pocascc2" required>
+                    <!-- <label for="pocatol"><b>Tollerance:</b></label> -->
+                    <input type="text" placeholder="Return all points within (X) km of POCA" name="pocatol" required>
+
+                    </p>
+                    <input class="btn-submit" id="form2-submit" type="submit" name="GetPOCA" value="Get POCA">
+                    <!-- <p><input type="submit" value="Do calculation" /></p> -->
+                </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+
